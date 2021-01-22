@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490A6CB0712E3514B71E0A84 /* Pods_KeyflowTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE9F5E0A62192726157BDE /* Pods_KeyflowTask.framework */; };
 		B772023825BB3C1A00058371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772023725BB3C1A00058371 /* AppDelegate.swift */; };
 		B772023A25BB3C1A00058371 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772023925BB3C1A00058371 /* SceneDelegate.swift */; };
 		B772023F25BB3C1A00058371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B772023D25BB3C1A00058371 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13EE9F5E0A62192726157BDE /* Pods_KeyflowTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyflowTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4083586B7E22381DF78C7F /* Pods-KeyflowTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyflowTask.release.xcconfig"; path = "Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask.release.xcconfig"; sourceTree = "<group>"; };
 		B772023425BB3C1A00058371 /* KeyflowTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyflowTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B772023725BB3C1A00058371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B772023925BB3C1A00058371 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		B772024025BB3C1D00058371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B772024325BB3C1D00058371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B772024525BB3C1D00058371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8C3FACE91D0A4F90365535 /* Pods-KeyflowTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyflowTask.debug.xcconfig"; path = "Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490A6CB0712E3514B71E0A84 /* Pods_KeyflowTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		301343041415B5555966EE1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13EE9F5E0A62192726157BDE /* Pods_KeyflowTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35F8D819F9D8EA1FA96BA9D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C3FACE91D0A4F90365535 /* Pods-KeyflowTask.debug.xcconfig */,
+				9F4083586B7E22381DF78C7F /* Pods-KeyflowTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B772022B25BB3C1A00058371 = {
 			isa = PBXGroup;
 			children = (
 				B772023625BB3C1A00058371 /* KeyflowTask */,
 				B772023525BB3C1A00058371 /* Products */,
+				35F8D819F9D8EA1FA96BA9D2 /* Pods */,
+				301343041415B5555966EE1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +78,12 @@
 		B772023625BB3C1A00058371 /* KeyflowTask */ = {
 			isa = PBXGroup;
 			children = (
+				B772024C25BB3CD100058371 /* Application */,
 				B772025125BB3D2800058371 /* Resources */,
 				B772025025BB3D1000058371 /* Storyboards */,
-				B772024F25BB3D0400058371 /* Modules */,
 				B772024E25BB3CEE00058371 /* Services */,
 				B772024D25BB3CE700058371 /* Models */,
-				B772024C25BB3CD100058371 /* Application */,
+				B772024F25BB3D0400058371 /* Modules */,
 			);
 			path = KeyflowTask;
 			sourceTree = "<group>";
@@ -119,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B772024825BB3C1D00058371 /* Build configuration list for PBXNativeTarget "KeyflowTask" */;
 			buildPhases = (
+				2DDC1DBFA5E68E1E3D2AED01 /* [CP] Check Pods Manifest.lock */,
 				B772023025BB3C1A00058371 /* Sources */,
 				B772023125BB3C1A00058371 /* Frameworks */,
 				B772023225BB3C1A00058371 /* Resources */,
+				0862A8684E6E7A488C24FBBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +202,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0862A8684E6E7A488C24FBBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DDC1DBFA5E68E1E3D2AED01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeyflowTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B772023025BB3C1A00058371 /* Sources */ = {
@@ -327,11 +395,12 @@
 		};
 		B772024925BB3C1D00058371 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE8C3FACE91D0A4F90365535 /* Pods-KeyflowTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KeyflowTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KeyflowTask/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,11 +414,12 @@
 		};
 		B772024A25BB3C1D00058371 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F4083586B7E22381DF78C7F /* Pods-KeyflowTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KeyflowTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KeyflowTask/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

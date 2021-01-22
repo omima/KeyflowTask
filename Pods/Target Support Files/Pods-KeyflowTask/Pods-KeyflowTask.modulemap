@@ -1,0 +1,6 @@
+framework module Pods_KeyflowTask {
+  umbrella header "Pods-KeyflowTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
