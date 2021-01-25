@@ -26,6 +26,11 @@
 		B772029825BEA4C000058371 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772029725BEA4C000058371 /* Event.swift */; };
 		B772029B25BEA60D00058371 /* Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772029A25BEA60D00058371 /* Venues.swift */; };
 		B772029E25BEA72500058371 /* EventWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772029D25BEA72500058371 /* EventWrapper.swift */; };
+		B77202F425BF1BCB00058371 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77202F325BF1BCB00058371 /* DateManager.swift */; };
+		B77202FA25BF1C7F00058371 /* EventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77202F825BF1C7F00058371 /* EventViewCell.swift */; };
+		B77202FB25BF1C7F00058371 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77202F925BF1C7F00058371 /* EventViewCell.xib */; };
+		B77202FF25BF1D3700058371 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77202FE25BF1D3700058371 /* UIView+CornerRadius.swift */; };
+		B772030225BF1EB900058371 /* UITableView+AutoLayoutHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772030125BF1EB900058371 /* UITableView+AutoLayoutHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +56,11 @@
 		B772029725BEA4C000058371 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B772029A25BEA60D00058371 /* Venues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venues.swift; sourceTree = "<group>"; };
 		B772029D25BEA72500058371 /* EventWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWrapper.swift; sourceTree = "<group>"; };
+		B77202F325BF1BCB00058371 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		B77202F825BF1C7F00058371 /* EventViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewCell.swift; sourceTree = "<group>"; };
+		B77202F925BF1C7F00058371 /* EventViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewCell.xib; sourceTree = "<group>"; };
+		B77202FE25BF1D3700058371 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		B772030125BF1EB900058371 /* UITableView+AutoLayoutHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+AutoLayoutHeader.swift"; sourceTree = "<group>"; };
 		CE8C3FACE91D0A4F90365535 /* Pods-KeyflowTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyflowTask.debug.xcconfig"; path = "Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				B772024C25BB3CD100058371 /* Application */,
+				B77202F225BF1ADE00058371 /* Utilities */,
 				B772025125BB3D2800058371 /* Resources */,
 				B772025025BB3D1000058371 /* Storyboards */,
 				B772024E25BB3CEE00058371 /* Services */,
@@ -210,6 +221,7 @@
 		B772026525BB3F1700058371 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B77202F725BF1C5C00058371 /* Cell */,
 				B772026625BB3F1700058371 /* EventsView.swift */,
 			);
 			path = View;
@@ -229,6 +241,25 @@
 				B772026A25BB3F1700058371 /* EventsInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B77202F225BF1ADE00058371 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B77202F325BF1BCB00058371 /* DateManager.swift */,
+				B77202FE25BF1D3700058371 /* UIView+CornerRadius.swift */,
+				B772030125BF1EB900058371 /* UITableView+AutoLayoutHeader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B77202F725BF1C5C00058371 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B77202F825BF1C7F00058371 /* EventViewCell.swift */,
+				B77202F925BF1C7F00058371 /* EventViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +324,7 @@
 				B772024425BB3C1D00058371 /* LaunchScreen.storyboard in Resources */,
 				B772024125BB3C1D00058371 /* Assets.xcassets in Resources */,
 				B772023F25BB3C1A00058371 /* Main.storyboard in Resources */,
+				B77202FB25BF1C7F00058371 /* EventViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,9 +380,12 @@
 				B772027025BB3F1700058371 /* EventsView.swift in Sources */,
 				B772027125BB3F1700058371 /* EventsProtocols.swift in Sources */,
 				B772026E25BB3F1700058371 /* EventsPresenter.swift in Sources */,
+				B77202FF25BF1D3700058371 /* UIView+CornerRadius.swift in Sources */,
 				B772026D25BB3F1700058371 /* EventsAPIDataManager.swift in Sources */,
 				B772029225BEA2D300058371 /* EndPoint.swift in Sources */,
+				B77202F425BF1BCB00058371 /* DateManager.swift in Sources */,
 				B772026F25BB3F1700058371 /* EventsWireFrame.swift in Sources */,
+				B77202FA25BF1C7F00058371 /* EventViewCell.swift in Sources */,
 				B772028C25BEA21A00058371 /* BaseViewController.swift in Sources */,
 				B772023825BB3C1A00058371 /* AppDelegate.swift in Sources */,
 				B772029525BEA2E800058371 /* BaseAPIServiceError.swift in Sources */,
@@ -360,6 +395,7 @@
 				B772029B25BEA60D00058371 /* Venues.swift in Sources */,
 				B772027225BB3F1700058371 /* EventsInteractor.swift in Sources */,
 				B772029825BEA4C000058371 /* Event.swift in Sources */,
+				B772030225BF1EB900058371 /* UITableView+AutoLayoutHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

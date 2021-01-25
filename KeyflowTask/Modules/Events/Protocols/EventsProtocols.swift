@@ -23,6 +23,8 @@ protocol EventsPresenterProtocol: class {
     var wireFrame: EventsWireFrameProtocol? { get set }
    
     func viewLoaded()
+    func numberOfItems() -> Int
+    func getEventItem(at index : Int) ->  EventViewModel
 
 }
 
@@ -36,6 +38,9 @@ protocol EventsInteractorOutputProtocol: class {
 // MARK: Presenter -> Interactor
 protocol EventsInteractorInputProtocol: class {
     var presenter: EventsInteractorOutputProtocol? { get set }
+    var venues : [Venues] { get }
+    var events : [Event] { get }
+    
     func loadData()
 }
 
