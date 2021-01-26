@@ -13,11 +13,15 @@ class EventsView: BaseViewController {
     // MARK:- Constants
     struct Constants {
         static let cellIdentifier = "EventViewCell"
-
     }
     
     // MARK:- Properties
     var presenter: EventsPresenterProtocol?
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(EventsView.loadEvents), for: .valueChanged)
+        return refreshControl
+    }()
     
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -30,6 +34,12 @@ class EventsView: BaseViewController {
         configureTableView()
     }
     
+    override func hideLoader() {
+        super.hideLoader()
+        refreshControl.endRefreshing()
+    }
+    
+    
     // MARK: Private Methods
     fileprivate func registerCell(){
         let cityCell = UINib(nibName: Constants.cellIdentifier, bundle:nil)
@@ -37,6 +47,11 @@ class EventsView: BaseViewController {
     }
     fileprivate func configureTableView() {
         tableView.sizeHeaderToFit()
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc fileprivate func loadEvents() {
+        presenter?.viewLoaded()
     }
 }
 

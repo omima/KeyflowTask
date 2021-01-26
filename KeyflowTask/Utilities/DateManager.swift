@@ -15,7 +15,6 @@ class DateManager : NSObject  {
         let formatter = Foundation.DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" //2017-04-01T18:05:00.000
         let date1  = formatter.date(from:  date)
-        print("date:\(String(describing: date1))")
         formatter.dateFormat = "HH:mm"
         let resultTime = formatter.string(from: date1!)
         
