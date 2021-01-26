@@ -76,5 +76,8 @@ extension EventsView : UITableViewDelegate , UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.openDetailsView(at: indexPath.row)
+    }
     
 }

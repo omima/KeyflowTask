@@ -30,20 +30,8 @@ class EventsPresenter {
         let endPoint = ImageEndponit.image(name: name)
         return endPoint.path
     }
-}
-
-// MARK:- EventsPresenterProtocol
-extension EventsPresenter: EventsPresenterProtocol {
-    func viewLoaded() {
-        view?.showLoader()
-        interactor?.loadData()
-    }
     
-    func numberOfItems() -> Int {
-        return  interactor?.events.count ?? 0
-    }
-    
-    func getEventItem(at index : Int) ->  EventViewModel {
+    fileprivate  func getEventViewModel(at index : Int) -> EventViewModel {
         let event =  interactor!.events[index]
         let venue = interactor!.venues.first{$0.id == event.venueId}
      
@@ -56,9 +44,34 @@ extension EventsPresenter: EventsPresenterProtocol {
         let end = DateManager.shared.getTime(from: event.endTime)
         let day = DateManager.shared.convertDate(with: event.startTime)
         
-        let eventViewModel = EventViewModel(id: event.id, name: event.name, venueName: venue?.name ?? "", image: imageUrl, eventDate: day, startTime: start, endTime: end)
+        let eventViewModel = EventViewModel(id: event.id, name: event.name, venueName: venue?.name ?? "", eventDesc: event.description, image: imageUrl, eventDate: day, startTime: start, endTime: end)
         return eventViewModel
     }
+}
+
+// MARK:- EventsPresenterProtocol
+extension EventsPresenter: EventsPresenterProtocol {
+    
+    
+    func viewLoaded() {
+        view?.showLoader()
+        interactor?.loadData()
+    }
+    
+    func numberOfItems() -> Int {
+        return  interactor?.events.count ?? 0
+    }
+    
+    func getEventItem(at index : Int) ->  EventViewModel {
+        let eventViewModel = getEventViewModel(at: index)
+        return eventViewModel
+    }
+
+    func openDetailsView(at index: Int) {
+        let eventViewModel = getEventViewModel(at: index)
+        wireFrame?.openDetails(from: view!, with: eventViewModel)
+    }
+    
 
 }
 
@@ -80,6 +93,7 @@ struct EventViewModel  {
     var id : Int
     var name : String
     var venueName : String
+    var eventDesc : String
     var image : URL?
     var eventDate : String
     var startTime : String

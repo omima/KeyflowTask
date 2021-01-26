@@ -36,6 +36,13 @@ class EventsWireFrame: EventsWireFrameProtocol {
         return view
     }
     
+    func openDetails(from view:EventsViewProtocol, with event: EventViewModel){
+        let detailsView = EventDetailsWireFrame.createEventDetailsView(with: event)
+        if let sourceView = view as? UIViewController {
+            sourceView.present(detailsView, animated: true, completion: nil)
+        }
+    }
+    
     static var storyBoard: UIStoryboard {
         get {
             if UIDevice.current.userInterfaceIdiom == .phone {

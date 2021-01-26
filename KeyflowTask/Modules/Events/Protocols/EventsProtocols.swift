@@ -25,6 +25,7 @@ protocol EventsPresenterProtocol: class {
     func viewLoaded()
     func numberOfItems() -> Int
     func getEventItem(at index : Int) ->  EventViewModel
+    func openDetailsView(at index : Int)
 
 }
 
@@ -47,4 +48,5 @@ protocol EventsInteractorInputProtocol: class {
 // MARK:- Wireframe Protocols
 protocol EventsWireFrameProtocol: class {
     static func createEventsView() -> EventsView
+    func openDetails(from view:EventsViewProtocol, with event: EventViewModel)
 }
