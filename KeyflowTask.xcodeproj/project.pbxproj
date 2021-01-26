@@ -3,27 +3,77 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490A6CB0712E3514B71E0A84 /* Pods_KeyflowTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE9F5E0A62192726157BDE /* Pods_KeyflowTask.framework */; };
 		B772023825BB3C1A00058371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772023725BB3C1A00058371 /* AppDelegate.swift */; };
 		B772023A25BB3C1A00058371 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772023925BB3C1A00058371 /* SceneDelegate.swift */; };
-		B772023C25BB3C1A00058371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772023B25BB3C1A00058371 /* ViewController.swift */; };
 		B772023F25BB3C1A00058371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B772023D25BB3C1A00058371 /* Main.storyboard */; };
 		B772024125BB3C1D00058371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B772024025BB3C1D00058371 /* Assets.xcassets */; };
 		B772024425BB3C1D00058371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B772024225BB3C1D00058371 /* LaunchScreen.storyboard */; };
+		B772026D25BB3F1700058371 /* EventsAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772026025BB3F1700058371 /* EventsAPIDataManager.swift */; };
+		B772026E25BB3F1700058371 /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772026225BB3F1700058371 /* EventsPresenter.swift */; };
+		B772026F25BB3F1700058371 /* EventsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772026425BB3F1700058371 /* EventsWireFrame.swift */; };
+		B772027025BB3F1700058371 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772026625BB3F1700058371 /* EventsView.swift */; };
+		B772027125BB3F1700058371 /* EventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772026825BB3F1700058371 /* EventsProtocols.swift */; };
+		B772027225BB3F1700058371 /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772026A25BB3F1700058371 /* EventsInteractor.swift */; };
+		B772028C25BEA21A00058371 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772028B25BEA21A00058371 /* BaseViewController.swift */; };
+		B772028F25BEA29600058371 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772028E25BEA29600058371 /* BaseAPIService.swift */; };
+		B772029225BEA2D300058371 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772029125BEA2D300058371 /* EndPoint.swift */; };
+		B772029525BEA2E800058371 /* BaseAPIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772029425BEA2E800058371 /* BaseAPIServiceError.swift */; };
+		B772029825BEA4C000058371 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772029725BEA4C000058371 /* Event.swift */; };
+		B772029B25BEA60D00058371 /* Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772029A25BEA60D00058371 /* Venues.swift */; };
+		B772029E25BEA72500058371 /* EventWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772029D25BEA72500058371 /* EventWrapper.swift */; };
+		B77202F425BF1BCB00058371 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77202F325BF1BCB00058371 /* DateManager.swift */; };
+		B77202FA25BF1C7F00058371 /* EventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77202F825BF1C7F00058371 /* EventViewCell.swift */; };
+		B77202FB25BF1C7F00058371 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77202F925BF1C7F00058371 /* EventViewCell.xib */; };
+		B77202FF25BF1D3700058371 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77202FE25BF1D3700058371 /* UIView+CornerRadius.swift */; };
+		B772030225BF1EB900058371 /* UITableView+AutoLayoutHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772030125BF1EB900058371 /* UITableView+AutoLayoutHeader.swift */; };
+		B772031F25C03A1500058371 /* EventDetailsAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772031225C03A1500058371 /* EventDetailsAPIDataManager.swift */; };
+		B772032025C03A1500058371 /* EventDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772031425C03A1500058371 /* EventDetailsPresenter.swift */; };
+		B772032125C03A1500058371 /* EventDetailsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772031625C03A1500058371 /* EventDetailsWireFrame.swift */; };
+		B772032225C03A1500058371 /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772031825C03A1500058371 /* EventDetailsView.swift */; };
+		B772032325C03A1500058371 /* EventDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772031A25C03A1500058371 /* EventDetailsProtocols.swift */; };
+		B772032425C03A1500058371 /* EventDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772031C25C03A1500058371 /* EventDetailsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13EE9F5E0A62192726157BDE /* Pods_KeyflowTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyflowTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4083586B7E22381DF78C7F /* Pods-KeyflowTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyflowTask.release.xcconfig"; path = "Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask.release.xcconfig"; sourceTree = "<group>"; };
 		B772023425BB3C1A00058371 /* KeyflowTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyflowTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B772023725BB3C1A00058371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B772023925BB3C1A00058371 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B772023B25BB3C1A00058371 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B772023E25BB3C1A00058371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B772024025BB3C1D00058371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B772024325BB3C1D00058371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B772024525BB3C1D00058371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B772026025BB3F1700058371 /* EventsAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsAPIDataManager.swift; sourceTree = "<group>"; };
+		B772026225BB3F1700058371 /* EventsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
+		B772026425BB3F1700058371 /* EventsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsWireFrame.swift; sourceTree = "<group>"; };
+		B772026625BB3F1700058371 /* EventsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		B772026825BB3F1700058371 /* EventsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsProtocols.swift; sourceTree = "<group>"; };
+		B772026A25BB3F1700058371 /* EventsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
+		B772028B25BEA21A00058371 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B772028E25BEA29600058371 /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
+		B772029125BEA2D300058371 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		B772029425BEA2E800058371 /* BaseAPIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIServiceError.swift; sourceTree = "<group>"; };
+		B772029725BEA4C000058371 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B772029A25BEA60D00058371 /* Venues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venues.swift; sourceTree = "<group>"; };
+		B772029D25BEA72500058371 /* EventWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWrapper.swift; sourceTree = "<group>"; };
+		B77202F325BF1BCB00058371 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		B77202F825BF1C7F00058371 /* EventViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewCell.swift; sourceTree = "<group>"; };
+		B77202F925BF1C7F00058371 /* EventViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewCell.xib; sourceTree = "<group>"; };
+		B77202FE25BF1D3700058371 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		B772030125BF1EB900058371 /* UITableView+AutoLayoutHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+AutoLayoutHeader.swift"; sourceTree = "<group>"; };
+		B772031225C03A1500058371 /* EventDetailsAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsAPIDataManager.swift; sourceTree = "<group>"; };
+		B772031425C03A1500058371 /* EventDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsPresenter.swift; sourceTree = "<group>"; };
+		B772031625C03A1500058371 /* EventDetailsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsWireFrame.swift; sourceTree = "<group>"; };
+		B772031825C03A1500058371 /* EventDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
+		B772031A25C03A1500058371 /* EventDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsProtocols.swift; sourceTree = "<group>"; };
+		B772031C25C03A1500058371 /* EventDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractor.swift; sourceTree = "<group>"; };
+		CE8C3FACE91D0A4F90365535 /* Pods-KeyflowTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyflowTask.debug.xcconfig"; path = "Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +81,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490A6CB0712E3514B71E0A84 /* Pods_KeyflowTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		301343041415B5555966EE1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13EE9F5E0A62192726157BDE /* Pods_KeyflowTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35F8D819F9D8EA1FA96BA9D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C3FACE91D0A4F90365535 /* Pods-KeyflowTask.debug.xcconfig */,
+				9F4083586B7E22381DF78C7F /* Pods-KeyflowTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B772022B25BB3C1A00058371 = {
 			isa = PBXGroup;
 			children = (
 				B772023625BB3C1A00058371 /* KeyflowTask */,
 				B772023525BB3C1A00058371 /* Products */,
+				35F8D819F9D8EA1FA96BA9D2 /* Pods */,
+				301343041415B5555966EE1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +126,214 @@
 		B772023625BB3C1A00058371 /* KeyflowTask */ = {
 			isa = PBXGroup;
 			children = (
-				B772023725BB3C1A00058371 /* AppDelegate.swift */,
-				B772023925BB3C1A00058371 /* SceneDelegate.swift */,
-				B772023B25BB3C1A00058371 /* ViewController.swift */,
-				B772023D25BB3C1A00058371 /* Main.storyboard */,
-				B772024025BB3C1D00058371 /* Assets.xcassets */,
-				B772024225BB3C1D00058371 /* LaunchScreen.storyboard */,
-				B772024525BB3C1D00058371 /* Info.plist */,
+				B772024C25BB3CD100058371 /* Application */,
+				B77202F225BF1ADE00058371 /* Utilities */,
+				B772025125BB3D2800058371 /* Resources */,
+				B772025025BB3D1000058371 /* Storyboards */,
+				B772024E25BB3CEE00058371 /* Services */,
+				B772024D25BB3CE700058371 /* Models */,
+				B772024F25BB3D0400058371 /* Modules */,
 			);
 			path = KeyflowTask;
+			sourceTree = "<group>";
+		};
+		B772024C25BB3CD100058371 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B772023925BB3C1A00058371 /* SceneDelegate.swift */,
+				B772023725BB3C1A00058371 /* AppDelegate.swift */,
+				B772028B25BEA21A00058371 /* BaseViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B772024D25BB3CE700058371 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B772029725BEA4C000058371 /* Event.swift */,
+				B772029A25BEA60D00058371 /* Venues.swift */,
+				B772029D25BEA72500058371 /* EventWrapper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B772024E25BB3CEE00058371 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B772028E25BEA29600058371 /* BaseAPIService.swift */,
+				B772029125BEA2D300058371 /* EndPoint.swift */,
+				B772029425BEA2E800058371 /* BaseAPIServiceError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B772024F25BB3D0400058371 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B772030D25C03A1500058371 /* EventDetails */,
+				B772025B25BB3F1700058371 /* Events */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B772025025BB3D1000058371 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B772024225BB3C1D00058371 /* LaunchScreen.storyboard */,
+				B772023D25BB3C1A00058371 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B772025125BB3D2800058371 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B772024525BB3C1D00058371 /* Info.plist */,
+				B772024025BB3C1D00058371 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B772025B25BB3F1700058371 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				B772025C25BB3F1700058371 /* APIDataManager */,
+				B772026125BB3F1700058371 /* Presenter */,
+				B772026325BB3F1700058371 /* WireFrame */,
+				B772026525BB3F1700058371 /* View */,
+				B772026725BB3F1700058371 /* Protocols */,
+				B772026925BB3F1700058371 /* Interactor */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		B772025C25BB3F1700058371 /* APIDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B772026025BB3F1700058371 /* EventsAPIDataManager.swift */,
+			);
+			path = APIDataManager;
+			sourceTree = "<group>";
+		};
+		B772026125BB3F1700058371 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B772026225BB3F1700058371 /* EventsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B772026325BB3F1700058371 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				B772026425BB3F1700058371 /* EventsWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		B772026525BB3F1700058371 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B77202F725BF1C5C00058371 /* Cell */,
+				B772026625BB3F1700058371 /* EventsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B772026725BB3F1700058371 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B772026825BB3F1700058371 /* EventsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B772026925BB3F1700058371 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B772026A25BB3F1700058371 /* EventsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B77202F225BF1ADE00058371 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B77202F325BF1BCB00058371 /* DateManager.swift */,
+				B77202FE25BF1D3700058371 /* UIView+CornerRadius.swift */,
+				B772030125BF1EB900058371 /* UITableView+AutoLayoutHeader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B77202F725BF1C5C00058371 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B77202F825BF1C7F00058371 /* EventViewCell.swift */,
+				B77202F925BF1C7F00058371 /* EventViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B772030D25C03A1500058371 /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B772030E25C03A1500058371 /* DataManager */,
+				B772031325C03A1500058371 /* Presenter */,
+				B772031525C03A1500058371 /* WireFrame */,
+				B772031725C03A1500058371 /* View */,
+				B772031925C03A1500058371 /* Protocols */,
+				B772031B25C03A1500058371 /* Interactor */,
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
+		B772030E25C03A1500058371 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B772031225C03A1500058371 /* EventDetailsAPIDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B772031325C03A1500058371 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B772031425C03A1500058371 /* EventDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B772031525C03A1500058371 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				B772031625C03A1500058371 /* EventDetailsWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		B772031725C03A1500058371 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B772031825C03A1500058371 /* EventDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B772031925C03A1500058371 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B772031A25C03A1500058371 /* EventDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B772031B25C03A1500058371 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B772031C25C03A1500058371 /* EventDetailsInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B772024825BB3C1D00058371 /* Build configuration list for PBXNativeTarget "KeyflowTask" */;
 			buildPhases = (
+				2DDC1DBFA5E68E1E3D2AED01 /* [CP] Check Pods Manifest.lock */,
 				B772023025BB3C1A00058371 /* Sources */,
 				B772023125BB3C1A00058371 /* Frameworks */,
 				B772023225BB3C1A00058371 /* Resources */,
+				0862A8684E6E7A488C24FBBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,19 +398,84 @@
 				B772024425BB3C1D00058371 /* LaunchScreen.storyboard in Resources */,
 				B772024125BB3C1D00058371 /* Assets.xcassets in Resources */,
 				B772023F25BB3C1A00058371 /* Main.storyboard in Resources */,
+				B77202FB25BF1C7F00058371 /* EventViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0862A8684E6E7A488C24FBBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeyflowTask/Pods-KeyflowTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DDC1DBFA5E68E1E3D2AED01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeyflowTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B772023025BB3C1A00058371 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B772023C25BB3C1A00058371 /* ViewController.swift in Sources */,
+				B772027025BB3F1700058371 /* EventsView.swift in Sources */,
+				B772027125BB3F1700058371 /* EventsProtocols.swift in Sources */,
+				B772032125C03A1500058371 /* EventDetailsWireFrame.swift in Sources */,
+				B772026E25BB3F1700058371 /* EventsPresenter.swift in Sources */,
+				B772032225C03A1500058371 /* EventDetailsView.swift in Sources */,
+				B77202FF25BF1D3700058371 /* UIView+CornerRadius.swift in Sources */,
+				B772032325C03A1500058371 /* EventDetailsProtocols.swift in Sources */,
+				B772026D25BB3F1700058371 /* EventsAPIDataManager.swift in Sources */,
+				B772029225BEA2D300058371 /* EndPoint.swift in Sources */,
+				B77202F425BF1BCB00058371 /* DateManager.swift in Sources */,
+				B772026F25BB3F1700058371 /* EventsWireFrame.swift in Sources */,
+				B77202FA25BF1C7F00058371 /* EventViewCell.swift in Sources */,
+				B772028C25BEA21A00058371 /* BaseViewController.swift in Sources */,
 				B772023825BB3C1A00058371 /* AppDelegate.swift in Sources */,
+				B772032025C03A1500058371 /* EventDetailsPresenter.swift in Sources */,
+				B772032425C03A1500058371 /* EventDetailsInteractor.swift in Sources */,
+				B772031F25C03A1500058371 /* EventDetailsAPIDataManager.swift in Sources */,
+				B772029525BEA2E800058371 /* BaseAPIServiceError.swift in Sources */,
+				B772028F25BEA29600058371 /* BaseAPIService.swift in Sources */,
+				B772029E25BEA72500058371 /* EventWrapper.swift in Sources */,
 				B772023A25BB3C1A00058371 /* SceneDelegate.swift in Sources */,
+				B772029B25BEA60D00058371 /* Venues.swift in Sources */,
+				B772027225BB3F1700058371 /* EventsInteractor.swift in Sources */,
+				B772029825BEA4C000058371 /* Event.swift in Sources */,
+				B772030225BF1EB900058371 /* UITableView+AutoLayoutHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,11 +619,12 @@
 		};
 		B772024925BB3C1D00058371 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE8C3FACE91D0A4F90365535 /* Pods-KeyflowTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KeyflowTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KeyflowTask/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,11 +638,12 @@
 		};
 		B772024A25BB3C1D00058371 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F4083586B7E22381DF78C7F /* Pods-KeyflowTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KeyflowTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KeyflowTask/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
